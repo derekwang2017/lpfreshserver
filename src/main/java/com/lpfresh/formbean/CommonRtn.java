@@ -10,6 +10,8 @@ public class CommonRtn<T> {
     private String msg;
     private T data;
     private List<T> datalist;
+    private int totalcnt;
+    private int totalpage;
 
     public int getStatus() {
         return status;
@@ -41,5 +43,21 @@ public class CommonRtn<T> {
 
     public void setDatalist(List<T> datalist) {
         this.datalist = datalist;
+    }
+
+    public int getTotalcnt() {
+        return totalcnt;
+    }
+
+    public void setTotalcnt(int totalcnt) {
+        this.totalcnt = totalcnt;
+    }
+
+    public int getTotalpage() {
+        return totalpage;
+    }
+
+    public void setTotalpage(int totalpage) {
+        this.totalpage = totalpage;
     }
 }
