@@ -12,7 +12,7 @@ import java.util.Date;
  * Created by 87831 on 2018/1/25/0025.
  */
 public class Util {
-
+    public final static String imgip = "http://139.224.236.146:8890";
     public static boolean isEmpty(final String str) {
         if (str == null) {
             return true;
@@ -75,5 +75,25 @@ public class Util {
 
         System.out.println("上传文件成功======================");
         return true;
+    }
+
+    //:/media/img/lpfresh/20180125/20180125131701.png
+    public static String getImgurl(String path){
+        //由于nginx配置，直接访问路径img/lpfresh...即可
+        String url = "";
+        if(!isEmpty(path)){
+            path = path.replace("/media","");
+        }
+        url = imgip + path;
+
+        return url;
+    }
+
+    public static Integer convertToInt(String str){
+        try{
+            return Integer.parseInt(str);
+        }catch(Exception e){
+            return 0;
+        }
     }
 }

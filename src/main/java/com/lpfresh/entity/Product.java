@@ -16,6 +16,7 @@ public class Product {
     private String lpcreatdtm;
     private int lpdownflag;
     private BigDecimal lpstockamount;
+    private int lpheadimgid;
 
     public int getLpid() {
         return lpid;
@@ -95,5 +96,13 @@ public class Product {
 
     public void setLpstockamount(BigDecimal lpstockamount) {
         this.lpstockamount = lpstockamount;
+    }
+
+    public int getLpheadimgid() {
+        return lpheadimgid;
+    }
+
+    public void setLpheadimgid(int lpheadimgid) {
+        this.lpheadimgid = lpheadimgid;
     }
 }
